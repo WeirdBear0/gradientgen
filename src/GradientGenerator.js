@@ -174,7 +174,7 @@ const GradientGenerator = () => {
   return (
     <div className="futuristic-root" style={themeVars}>
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 24 }}>
-        <h2 style={{ letterSpacing: 1, fontWeight: 700, fontFamily: "Raleway" }}>Gradient Generator</h2>
+        <h2 style={{ letterSpacing: 1, fontWeight: 700, fontFamily: "Raleway" }}>Chameleon Gradient Generator</h2>
       </div>
       <div className="panel" style={{ marginBottom: 24 }}>
         <label>
