@@ -587,16 +587,16 @@ class Gradient {
       let i = 1;
       while (true) {
         const cssPropertyName = `--gradient-color-${i}`;
-        let hex = this.computedCanvasStyle.getPropertyValue(cssPropertyName).trim();
+          let hex = this.computedCanvasStyle.getPropertyValue(cssPropertyName).trim();
         if (!hex) break;
-        //Check if shorthand hex value was used and double the length so the conversion in normalizeColor will work.
+          //Check if shorthand hex value was used and double the length so the conversion in normalizeColor will work.
         if (hex.length === 4) {
-            const hexTemp = hex.substr(1).split("").map(hexTemp => hexTemp + hexTemp).join("");
+              const hexTemp = hex.substr(1).split("").map(hexTemp => hexTemp + hexTemp).join("");
             hex = `#${hexTemp}`;
         }
         sectionColors.push(hex && `0x${hex.substr(1)}`);
         i++;
-      }
+          }
       this.sectionColors = sectionColors.filter(Boolean).map(normalizeColor);
   }
 }

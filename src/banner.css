@@ -1,26 +1,25 @@
 /* Futuristic, Cursor-inspired UI */
 :root {
-  --bg: #0a0a0f;
-  --panel: rgba(24, 26, 34, 0.85);
-  --text: #f6f7fa;
-  --accent: #00ffe7;
-  --border: #23293a;
+  --font: 'Libertinus Math', serif;
+  --bg-gradient: linear-gradient(135deg, #fbeffb 0%, #f7f6fa 100%);
+  --panel-bg: rgba(255,255,255,0.85);
+  --panel-shadow: 0 8px 32px 0 rgba(200, 150, 200, 0.18);
+  --accent: #e7b6e7;
+  --border: #f3eaf7;
+  --radius: 28px;
+  --transition: 0.3s cubic-bezier(.4,2,.6,1);
   --input: #181c24;
   --shadow: 0 8px 32px 0 rgba(0,0,0,0.25);
   --glass: rgba(24, 26, 34, 0.65);
-  --radius: 18px;
-  --transition: 0.3s cubic-bezier(.4,2,.6,1);
-  --font: 'Raleway', 'Space Grotesk', 'Roboto', Arial, sans-serif;
 }
 
 body, .futuristic-root {
-  background: var(--bg);
-  color: var(--text);
   font-family: var(--font);
+  background: var(--bg-gradient);
+  color: #2d1e2f;
   min-height: 100vh;
   margin: 0;
   transition: background var(--transition), color var(--transition);
-  font-family: "Raleway", 'Space Grotesk';
 }
 
 .futuristic-root {
@@ -30,30 +29,30 @@ body, .futuristic-root {
 }
 
 .panel {
-  background: var(--glass);
+  background: var(--panel-bg);
   border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  padding: 32px 32px 20px 32px;
+  box-shadow: var(--panel-shadow);
   border: 1.5px solid var(--border);
+  padding: 32px 32px 20px 32px;
   margin-bottom: 32px;
-  backdrop-filter: blur(16px);
+  backdrop-filter: blur(12px);
   transition: background var(--transition), border var(--transition);
 }
 
 h2, h3 {
   font-family: var(--font);
-  font-weight: 800;
+  font-weight: 700;
   letter-spacing: 0.5px;
   margin: 0 0 12px 0;
 }
 
 h2 {
-  font-size: 2.8rem;
+  font-size: 2.5rem;
   margin-bottom: 8px;
 }
 
 h3 {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   margin-top: 32px;
 }
 
@@ -61,18 +60,18 @@ h3 {
   position: relative;
   width: 100%;
   min-height: 320px;
-  /* border-radius: 32px; */
+  border-radius: 32px;
   overflow: hidden;
-  box-shadow: 0 8px 40px 0 rgba(0,0,0,0.25);
+  box-shadow: var(--panel-shadow);
   margin-bottom: 0;
-  background: transparent;
+  background: var(--panel-bg);
 }
 
 .gradient-canvas {
   position: absolute;
   top: 0; left: 0; width: 100%; height: 100%;
   z-index: 1;
-  /* border-radius: 32px; */
+  border-radius: 32px;
   pointer-events: none;
 }
 
@@ -87,21 +86,25 @@ h3 {
   justify-content: center;
 }
 
-.mode-toggle {
-  background: var(--panel);
-  color: var(--text);
-  border: 2px solid var(--accent);
-  border-radius: 12px;
+.mode-toggle, .expand-btn, button {
+  background: var(--panel-bg);
+  color: #7d4c8e;
+  border: none;
+  border-radius: 999px;
+  font-family: var(--font);
   font-size: 1.1rem;
   font-weight: 600;
-  padding: 8px 22px;
+  padding: 10px 28px;
   cursor: pointer;
-  box-shadow: 0 2px 12px #00ffe733;
-  transition: background var(--transition), color var(--transition), border var(--transition);
+  box-shadow: 0 2px 12px #e7b6e7aa;
+  margin-bottom: 8px;
+  margin-right: 12px;
+  transition: background 0.3s, color 0.3s;
 }
-.mode-toggle:hover {
-  background: var(--accent);
-  color: #181c24;
+
+.expand-btn:hover, .mode-toggle:hover, button:hover {
+  background: #fbeffb;
+  color: #2d1e2f;
 }
 
 select, input[type="color"] {
@@ -135,41 +138,23 @@ input[type="color"]::-moz-color-swatch {
 }
 
 .code-window {
-  background: var(--panel);
-  color: var(--text);
+  background: var(--panel-bg);
+  color: #2d1e2f;
   border-radius: 16px;
-  box-shadow: 0 2px 16px #0002;
+  box-shadow: 0 2px 16px #e7b6e7aa;
   border: 1.5px solid var(--border);
   font-family: 'Fira Mono', 'JetBrains Mono', 'Menlo', 'Consolas', monospace;
   font-size: 1.05rem;
   padding: 24px;
   margin: 0 0 12px 0;
   overflow-x: auto;
-  transition: background var(--transition), color var(--transition);
-}
-
-.expand-btn {
-  background: var(--panel);
-  color: var(--accent);
-  border: 1.5px solid var(--accent);
-  border-radius: 10px;
-  font-size: 1.1rem;
-  font-weight: 600;
-  padding: 8px 18px;
-  cursor: pointer;
-  margin-bottom: 8px;
-  margin-right: 12px;
-  transition: background var(--transition), color var(--transition), border var(--transition);
-}
-.expand-btn:hover {
-  background: var(--accent);
-  color: #181c24;
 }
 
 label {
+  font-family: var(--font);
   font-size: 1.08rem;
   font-weight: 500;
-  color: var(--text);
+  color: #7d4c8e;
   margin-right: 18px;
 }
 
