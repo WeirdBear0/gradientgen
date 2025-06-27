@@ -107,34 +107,56 @@ h3 {
   color: #2d1e2f;
 }
 
-select, input[type="color"] {
-  background: var(--input);
-  color: var(--text);
-  border: 1.5px solid var(--border);
-  border-radius: 8px;
-  font-size: 1rem;
-  padding: 6px 12px;
-  margin-left: 8px;
-  margin-right: 8px;
-  outline: none;
-  transition: border var(--transition), background var(--transition);
+.color-swatch, .color-picker-swatch {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 2.5px solid #555;
+  background: #fff;
+  display: inline-block;
+  margin: 0 8px 0 0;
+  box-sizing: border-box;
+  transition: border 0.2s;
 }
-input[type="color"] {
-  width: 40px;
-  height: 40px;
+
+.color-picker-swatch {
+  padding: 0;
+  border: 2.5px solid #555;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+  background: none;
+}
+.color-picker-swatch::-webkit-color-swatch-wrapper {
   padding: 0;
   border-radius: 50%;
-  box-shadow: 0 0 0 2px var(--accent);
-  border: none;
-  cursor: pointer;
 }
-input[type="color"]::-webkit-color-swatch {
-  border-radius: 50%;
+.color-picker-swatch::-webkit-color-swatch {
   border: none;
+  border-radius: 50%;
 }
-input[type="color"]::-moz-color-swatch {
-  border-radius: 50%;
+.color-picker-swatch::-moz-color-swatch {
   border: none;
+  border-radius: 50%;
+}
+
+select {
+  background: #fff;
+  color: #7d4c8e;
+  border: 1.5px solid #e7b6e7;
+  border-radius: 16px;
+  font-size: 1.15rem;
+  font-family: 'Libertinus Math', serif;
+  padding: 8px 18px;
+  box-shadow: 0 2px 8px #e7b6e733;
+  margin: 0 8px;
+  transition: border 0.2s, box-shadow 0.2s;
+}
+select:focus {
+  outline: none;
+  border: 2px solid #b48fc8;
+  box-shadow: 0 0 0 2px #e7b6e7aa;
 }
 
 .code-window {

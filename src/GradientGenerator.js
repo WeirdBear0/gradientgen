@@ -194,7 +194,7 @@ const GradientGenerator = () => {
           </select>
         </label>
         <div style={{ margin: '16px 0', display: 'flex', flexWrap: 'wrap', gap: 16 }}>
-          {/* Editable color pickers as circles */}
+          {/* Editable color pickers as swatches */}
           {Array.from({ length: customizeCount }).map((_, i) => (
             <label key={i} style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
               <span style={{ fontSize: 14 }}>Color {i + 1}:</span>
@@ -202,20 +202,7 @@ const GradientGenerator = () => {
                 type="color"
                 value={userColors[i] || '#ffffff'}
                 onChange={(e) => handleColorChange(i, e.target.value)}
-                style={{
-                  width: 32,
-                  height: 32,
-                  border: 'none',
-                  background: 'none',
-                  boxShadow: '0 0 0 2px var(--accent)',
-                  borderRadius: '50%',
-                  padding: 0,
-                  cursor: 'pointer',
-                  appearance: 'none',
-                  WebkitAppearance: 'none',
-                  MozAppearance: 'none',
-                  display: 'inline-block',
-                }}
+                className="color-picker-swatch"
               />
             </label>
           ))}
