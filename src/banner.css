@@ -59,7 +59,7 @@ h3 {
 .gradient-banner-container {
   position: relative;
   width: 100%;
-  min-height: 320px;
+  min-height: 340px;
   border-radius: 32px;
   overflow: hidden;
   box-shadow: var(--panel-shadow);
@@ -221,7 +221,7 @@ label {
     margin-top: 18px;
   }
   .gradient-banner-container {
-    min-height: 120px;
+    min-height: 200px;
     border-radius: 10px;
   }
   .gradient-canvas {
