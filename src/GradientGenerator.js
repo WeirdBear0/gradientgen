@@ -174,7 +174,7 @@ const GradientGenerator = () => {
   return (
     <div className="futuristic-root" style={themeVars}>
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 24 }}>
-        <h2 style={{ letterSpacing: 1, fontWeight: 700, fontFamily: "Raleway" }}>Chameleon Gradient Generator</h2>
+        <h2 style={{ letterSpacing: 1, fontWeight: 700, fontFamily: "Libertinus Math" }}>Chameleon Gradient Generator</h2>
       </div>
       <div className="panel" style={{ marginBottom: 24 }}>
         <label>
@@ -234,13 +234,13 @@ const GradientGenerator = () => {
           ))}
         </div>
       </div>
-      <h3 style={{ margin: '32px 0 12px 0', fontWeight: 600, fontFamily: "Raleway" }}>LIVE PREVIEW</h3>
+      <h3 style={{ margin: '32px 0 12px 0', fontWeight: 600, fontFamily: "Libertinus Math" }}>LIVE PREVIEW</h3>
       <div style={{ border: '1.5px solid var(--border)', borderRadius: 16, overflow: 'hidden', marginBottom: 32, background: 'var(--panel)', boxShadow: '0 4px 32px #0001' }}>
         <GradientBanner colors={colors}>
           {/* Gradient only, no content */}
         </GradientBanner>
       </div>
-      <h3 style={{ margin: '32px 0 12px 0', fontWeight: 600, fontFamily: "Raleway" }}>GENERATED JSX</h3>
+      <h3 style={{ margin: '32px 0 12px 0', fontWeight: 600, fontFamily: "Libertinus Math" }}>GENERATED JSX</h3>
       <pre className="code-window" style={{ background: 'var(--panel)', color: 'var(--text)', padding: 20, borderRadius: 12, fontSize: 15, overflowX: 'auto', border: '1.5px solid var(--border)', marginBottom: 16 }}>
         {generatedJSX}
       </pre>
@@ -264,8 +264,8 @@ const GradientGenerator = () => {
           </pre>
         )}
       </div> */}
-      <div style={{ marginBottom: 32, fontFamily: "Raleway" }}>
-        <button className="expand-btn" onClick={handleDownloadZip} style={{ marginBottom: 32, fontFamily: "Raleway" }}>
+      <div style={{ marginBottom: 32, fontFamily: "Libertinus Math" }}>
+        <button className="expand-btn" onClick={handleDownloadZip} style={{ marginBottom: 32, fontFamily: "Libertinus Math" }}>
           Download All as ZIP
         </button>
       </div>
